@@ -1,0 +1,9 @@
+<h1>aaa.component.html</h1>
+
+<form [formGroup]="mainForm">
+  <div formArrayName="items">
+    <div *ngFor="let item of items.controls; let i = index">
+      <textarea [formControlName]="i" rows="5"></textarea>
+    </div>
+  </div>
+</form>
