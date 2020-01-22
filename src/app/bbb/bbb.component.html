@@ -3,7 +3,7 @@
 <form [formGroup]="mainForm">
   <div formArrayName="items">
     <div *ngFor="let item of items.controls; let i = index">
-      <textarea class="form-control" [formControlName]="i" rows="5"></textarea>
+      <textarea [formControlName]="i" rows="5" [value]="item.value"></textarea>
     </div>
   </div>
 </form>
